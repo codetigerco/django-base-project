@@ -4,6 +4,10 @@ django-base-project
 .. image:: https://travis-ci.org/codetigerco/django-base-project.svg?branch=master
     :target: https://travis-ci.org/codetigerco/django-base-project
 
+.. image:: https://requires.io/github/codetigerco/django-base-project/requirements.svg?branch=master
+     :target: https://requires.io/github/codetigerco/django-base-project/requirements/?branch=master
+     :alt: Requirements Status
+
 A template for creating Django projects quickly, inspired by `@pydanny <https://github.com/pydanny>`_  `@cookiecutter-django <https://github.com/pydanny/cookiecutter-django>`_ .
 
 Features
