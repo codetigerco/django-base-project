@@ -1,0 +1,14 @@
+language: python
+python:
+- '3.4'
+before_install:
+- sudo apt-get install python-tk
+- pip install --upgrade pip
+install: pip install -r requirements.txt
+script: python app/manage.py test
+notifications:
+  email:
+    on_success: never
+    on_failure: never
+  slack:
+    secure: c6zJgiCHFwKfMsqMFS/7PVq08Jj1dBNi3LN0VaUDYDkwSohR/Bs5X2lmsfvZweUIqILXkUUK8PGxJTDnS7Dx3EZoBkrVQ6Iq84pb9897zQQERz/O5DcYI9LQEM0/Avxr2WblveslbeE+OCqICMmdu79ep9S5oV8Gnwn4QK4ybz0=
