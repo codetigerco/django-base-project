@@ -1,8 +1,7 @@
 ===================
 django-base-project
 ===================
-.. image::
-https://travis-ci.org/codetigerco/django-base-project.svg?branch=master
+.. image:: https://travis-ci.org/codetigerco/django-base-project.svg?branch=master
     :target: https://travis-ci.org/codetigerco/django-base-project
 
 A template for creating Django projects quickly, inspired by @pydanny @cookiecutter-django.
