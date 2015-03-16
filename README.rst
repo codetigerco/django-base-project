@@ -11,7 +11,7 @@ Features
 
 - For Django 1.8
 - Python 3.4
-- `Link UI Kit <http://getuikit.com/>`
+- `Link UI Kit <http://getuikit.com/>`_
 - [AngularJS](https://angularjs.org/) (In the future)
 - File to be used with TravisCI 
 - Optimized to be used with Digital Ocean 
