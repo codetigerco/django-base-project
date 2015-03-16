@@ -1,7 +1,11 @@
-# django-base-project
+===================
+django-base-project
+===================
 A template for creating Django projects quickly, inspired by @pydanny @cookiecutter-django.
 
-# Features
+Features
+--------
+
 - For Django 1.8
 - Python 3.4
 - [UI Kit](http://getuikit.com/)
@@ -14,19 +18,22 @@ A template for creating Django projects quickly, inspired by @pydanny @cookiecut
 - [Fabric](http://www.fabfile.org/) for deployment automation
 - Basic Caching Setup
 
-# Constraints
+Constraints
+-----------
 - PostgresSQL everywhere
 - Enviroment variables for configuration (This won't work with Apache/mod_wsgi) 
 - Only maintained 3rd party libraries are used
 
-# Django and Python Related
+Django and Python Related
+-------------------------
 - You should use PiP and virtualenv
 - Coverage
 - Pylint
 - pytest
 - to be used with Nginx (as a reversed proxy) and gunicorn
 
-# Other Stuff
+Other Stuff
+-----------
 - The templates include a base.html, index.html and both a login.html and signup html.
 - Different settings and requirements list are included to work with
   the different locations where the server will live (base, local,
