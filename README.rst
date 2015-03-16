@@ -1,6 +1,10 @@
 ===================
 django-base-project
 ===================
+.. image::
+https://travis-ci.org/codetigerco/django-base-project.svg?branch=master
+    :target: https://travis-ci.org/codetigerco/django-base-project
+
 A template for creating Django projects quickly, inspired by @pydanny @cookiecutter-django.
 
 Features
@@ -36,8 +40,7 @@ Other Stuff
 -----------
 - The templates include a base.html, index.html and both a login.html and signup html.
 - Different settings and requirements list are included to work with
-  the different locations where the server will live (base, local,
-staging and production)
+  the different locations where the server will live (base, local, staging and production)
 
 
 
