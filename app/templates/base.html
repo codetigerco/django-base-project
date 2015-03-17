@@ -1,0 +1,43 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{% endblock title %}</title>
+
+  <link rel="stylesheet" href="{% static 'dist/css/uikit.css' %}">
+  <link rel="stylesheet" href="{% static 'dist/css/main.css' %}">
+
+  {% block extra_css %}
+
+  {% endblock extra_css %}
+</head>
+
+<body>
+    
+	{% block content %}
+	{% endblock content %}
+
+	<div class="credits">
+    <div class="uk-container uk-container-center">
+      <div class="uk-grid">
+        <div class="uk-width-1-1">
+          <p class="uk-float-right">Desarrollado por <a href="http://codetiger.co">Codetiger</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+	  
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="{% static 'dist/js/uikit.min.js' %}"></script>
+
+	{% block extra_js %}
+
+  {% endblock extra_js %}
+
+</body>
+</html>
