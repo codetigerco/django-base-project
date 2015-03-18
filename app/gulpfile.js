@@ -37,7 +37,7 @@ gulp.task('uikit-css', function(){
 // UIKIT JS
 
 gulp.task('uikit-js', function(){
-  return gulp.src(['static/src/uikit/js/uikit.min.js', 'static/src/uikit/js/components/*.min.js'])
+  return gulp.src(['static/src/uikit/js/uikit.min.js', 'static/src/uikit/js/components/*.min.js', '!static/src/uikit/js/components/slideshow-fx.min.js'])
   .pipe(plumber())
   .pipe(concat('uikit.min.js'))
   .pipe(gulp.dest('static/dist/js/'))
