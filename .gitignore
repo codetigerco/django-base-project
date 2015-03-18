@@ -56,3 +56,11 @@ docs/_build/
 
 # PyBuilder
 target/
+
+#Ignores gulp dependencies
+node_modules/
+
+#Ignore SASS cache
+.sass-cache
+
+.DS_Store
