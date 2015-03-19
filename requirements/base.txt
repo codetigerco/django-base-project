@@ -8,4 +8,5 @@ logilab-common==0.63.2
 paramiko==1.15.2
 pycrypto==2.6.1
 pylint==1.4.3
+psycopg2
 six==1.9.0
