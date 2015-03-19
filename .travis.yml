@@ -2,13 +2,11 @@ language: python
 python:
   - '3.4'
 before_install:
-  - time pip install pep8
   - psql -c 'create database myproductiondatabase;' -U postgres
   - sudo apt-get install python-tk
   - pip install --upgrade pip
 install: pip install -r requirements.txt
 script:
-  - pep8 --ignore E201,E202 --max-line-length=120 --exclude='migrations'
   - python app/manage.py test
 notifications:
   email:
