@@ -96,7 +96,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
  # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-dirs
 TEMPLATE_DIRS = (
-    join(BASE_DIR, 'templates'),
+    os.path.join(BASE_DIR, 'templates'),
 )
 
 TEMPLATE_LOADERS = (
