@@ -4,9 +4,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'myproductiondatabase',
-        'USER': 'myporoductiondatabaseuser',
-        'PASSWORD': 'mypassword',
+        'USER': 'postgres',
+        'PASSWORD': '',
         'HOST': 'LOCALHOST',
-        'PORT': '5432',
+        'PORT': '',
     }
 }
