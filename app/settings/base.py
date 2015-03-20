@@ -11,6 +11,12 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
+#A tuple that lists people who get code error notifications. When DEBUG=False
+#and a view raises an exception, Django will email these people with the full
+#exception information. Each member of the tuple should be a tuple of
+#(Full name, email address).
+ADMINS = (('Your Name Here', 'youremail@yourdomain.com'),)
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
