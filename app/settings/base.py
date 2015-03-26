@@ -5,11 +5,12 @@ https://docs.djangoproject.com/en/1.7/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
-
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import sys
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
 #A tuple that lists people who get code error notifications. When DEBUG=False
 #and a view raises an exception, Django will email these people with the full
