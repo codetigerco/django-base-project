@@ -31,7 +31,10 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
-SITE_ID=1
+#Authentication user model
+AUTH_USER_MODEL = 'users.User'
+
+SITE_ID = 1
 
 # Application definition
 
@@ -44,7 +47,9 @@ DJANGO_APPS = (
     'django.contrib.staticfiles',
 )
 
-LOCAL_APPS = ()
+LOCAL_APPS = (
+    'users',
+)
 
 THIRD_PARTY_APPS = ()
 
@@ -103,7 +108,7 @@ MEDIA_URL = '/media/'
 
 
 #TEMPLATE CONFIGURATION
-# See: https://docs.djangoproject.com/en/dev/ref/settings/#template-context-processors
+# See: docs.djangoproject.com/en/dev/ref/settings/#template-context-processors
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.debug',
