@@ -6,7 +6,8 @@ We made the following assumptions:
     - We prefer to extend what django already has than to create something new.
 """
 #Import the AbstractUser
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.contrib.auth.models import (AbstractBaseUser, BaseUserManager,
+                                        PermissionsMixin)
 #import the basic Django ORM models library
 from django.db import models
 from django.utils import timezone
@@ -58,7 +59,7 @@ class UserManager(BaseUserManager):
                                  **extra_fields)
 
 
-class User(AbstractBaseUser):
+class User(AbstractBaseUser, PermissionsMixin):
     """
     User with the same behaviour as Django's default User.
     User does not have username field. Uses email as the
@@ -69,14 +70,14 @@ class User(AbstractBaseUser):
         * last_login
         * is_superuser
     """
-    email = models.EmailField(max_length=True, unique=True, db_index=True)
+    email = models.EmailField(max_length=255, unique=True, db_index=True)
     is_staff = models.BooleanField(
         _('staff status'), default=False, help_text=_(
             'Designates whether the user can log into this admin site.'))
     is_active = models.BooleanField(_('active'), default=True, help_text=_(
-        'Designates whether this user should be treated as '
-        'active. Unselect this instead of deleting accounts.'))
-    date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
+        'Designates whether this user should be treated as active.'))
+    date_joined = models.DateTimeField(_('date joined'), default=timezone.now())
+    objects = UserManager()
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
@@ -92,6 +93,4 @@ class User(AbstractBaseUser):
         """ Return the email."""
         return self.email
 
-    def save(self, *args, **kwargs):
-        super(User, self).save(*args, **kwargs)
 
