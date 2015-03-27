@@ -6,7 +6,7 @@ We made the following assumptions:
     - We prefer to extend what django already has than to create something new.
 """
 #Import the AbstractUser
-from django.contrib.auth.models import AbstractBaseUser
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 #import the basic Django ORM models library
 from django.db import models
 from django.utils import timezone
