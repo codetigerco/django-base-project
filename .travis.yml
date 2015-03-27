@@ -6,7 +6,7 @@ before_install:
   - sudo apt-get install python-tk
   - pip install --upgrade pip
 install: pip install -r requirements.txt
-before_script: python app/manage.py migrate users
+before_script: python app/manage.py syncdb
 script:
   - python app/manage.py test
 notifications:
