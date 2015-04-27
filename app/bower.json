@@ -1,0 +1,18 @@
+{
+  "name": "django base",
+  "version": "0.0.0",
+  "homepage": "https://github.com/codetigerco/django-base-project",
+  "main": "bower.json",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static/src",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "uikit": "~2.20.0"
+  }
+}
