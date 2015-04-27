@@ -45,7 +45,7 @@ Other Stuff
 - Different settings and requirements list are included to work with
   the different locations where the server will live (base, local, staging and production)
 
-Instalation
+Installation
 -----------
 
 To create a new project with called 'recipes' using the template , run
@@ -53,4 +53,14 @@ the following command::
 
   $ django-admin startproject --template https://github.com/codetigerco/django-base-project/archive/master.zip recipes
 
+To install psycopg2 on the virtualenv on a Mac first you need to setup your PATH::
+
+	$ PATH=$PATH:/Applications/Postgres.app/Contents/Versions/(latest-version)/bin
+
+To setup the database do the following::
+
+	$ Open the postgress app 
+	$ CREATE DATABASE name-of-database;
+	$ \c name-of-database
+	$ CREATE USER name-of-user;
 
