@@ -59,7 +59,7 @@ To install psycopg2 on the virtualenv on a Mac first you need to setup your PATH
 
 To setup the database do the following::
 
-	$ Open the postgress app 
+	Open the postgress app 
 	$ CREATE DATABASE name-of-database;
 	$ \c name-of-database
 	$ CREATE USER name-of-user;
