@@ -13,12 +13,12 @@ A template for creating Django projects quickly, inspired by `@pydanny <https://
 Features
 --------
 
-- For Django 1.8
+- For Django 1.9
 - Python 3.4
 - `UI Kit <http://getuikit.com/>`_
 - `AngularJS <https://angularjs.org/>`_ (In the future)
-- File to be used with TravisCI 
-- Optimized to be used with Digital Ocean 
+- File to be used with TravisCI
+- Optimized to be used with Digital Ocean
 - Basic Static and Media Files configuration to be used with AWS
 - SASS for CSS
 - Gulp for Javascript Automation
