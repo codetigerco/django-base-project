@@ -2,7 +2,7 @@ from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from app import views as AppViews
-from django import views as DjangoViews
+from django.views.static import serve
 
 urlpatterns = [
     # Examples:
@@ -15,5 +15,6 @@ urlpatterns = [
 if settings.DEBUG:
     # static files (images, css, javascript, etc.)
     urlpatterns += [
-        url(r'^media/(?P<path>.*)$', DjangoViews.static.serve, {
+        url(r'^media/(?P<path>.*)$', serve, {
         'document_root': settings.MEDIA_ROOT})]
+
