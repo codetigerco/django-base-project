@@ -10,7 +10,7 @@ from django.contrib.auth.models import (AbstractBaseUser, BaseUserManager,
                                         PermissionsMixin)
 #import the basic Django ORM models library
 from django.db import models
-from django.utils import timezone
+from django.utils.timezone import now
 from django.utils.translation import ugettext_lazy as _
 
 
@@ -27,7 +27,6 @@ class UserManager(BaseUserManager):
         :return custom_user.models.User user: user
         :raise ValueError: email is not set
         """
-        now = timezone.now()
         if not email:
             raise ValueError('The given email must be set')
         email = self.normalize_email(email)
@@ -76,7 +75,7 @@ class User(AbstractBaseUser, PermissionsMixin):
             'Designates whether the user can log into this admin site.'))
     is_active = models.BooleanField(_('active'), default=True, help_text=_(
         'Designates whether this user should be treated as active.'))
-    date_joined = models.DateTimeField(_('date joined'), default=timezone.now())
+    date_joined = models.DateTimeField(_('date joined'), default=now)
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
